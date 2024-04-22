@@ -1,0 +1,15 @@
+.pomodoro-btn{
+  background-color: transparent; 
+  color: var(--white-color);
+  border: none;
+  display: inline-block;
+  width: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pomodoro-btn-disabled{
+  opacity: 0.2;
+  pointer-events: none;
+
+}

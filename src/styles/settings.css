@@ -1,0 +1,192 @@
+
+/* btn-menu */
+.btn-menu {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  cursor: pointer;
+  z-index: 1500;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  transition: all 0.2s ease-in-out;
+}
+.btn-menu svg {
+  width: 40px;
+  height: 40px;
+}
+
+.btn-menu:hover {
+  transform: rotate(360deg);
+}
+
+.btn-menu svg {
+  stroke: var(--disable-white-color);
+}
+
+.btn-menu:hover > svg {
+  stroke: var(--white-color);
+  filter: drop-shadow(0 0 0.5rem #ffffff);
+}
+
+/* menu */
+.menu-capa {
+  position: fixed;
+  width: 100%;
+  background-color: var(--black-tramsparent-color);
+  backdrop-filter: blur(2px);
+  z-index: 900;
+  height: 100dvh;
+
+  display: none;
+  transition: all 0.5s ease;
+}
+
+.menu-capa.menu-active {
+  display: block;
+}
+.menu {
+  background-color: var(--black-color);
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  right: 0;
+  height: 100dvh;
+  padding: 2rem;
+  width: 400px;
+  display: none;
+  z-index: 1000;
+  overflow-y: scroll;
+}
+.menu.menu-active {
+  display: flex;
+}
+
+.menu-item h3 {
+  font-weight: 100;
+  opacity: 0.7;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+  text-transform: uppercase;
+}
+
+
+
+
+.controls {
+  background-color: #1c1c1e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+}
+
+.controls-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ffffff27;
+  padding-bottom: 1.5rem;
+}
+.controls-item:last-child {
+  border: none;
+  padding-bottom: 0;
+}
+
+.input-range {
+  appearance: none;
+  width: 130px;
+  height: 0.1rem;
+  background: var(--white-color);
+  outline: none;
+
+  transition: opacity 0.2s;
+}
+
+.input-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #ffffff;
+  cursor: grabbing;
+  border-radius: 50%;
+}
+
+.select {
+  appearance: none;
+  padding: 0.5rem 1rem;
+  border: none;
+  color: var(--white-color);
+  background-color: #39383d;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  width: 130px;
+}
+.select:focus {
+  border: none;
+  outline: none;
+}
+
+/* Estilo de las opciones */
+.select option {
+  color: #39383d;
+  color: var(--white-color);
+}
+
+/* settings pomodoro */
+.controls-item-pomodoro{
+  flex-direction: column;
+  align-items: self-start;
+}
+
+.controls-pomodoro-settings{
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.control-pomodoro{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.control-pomodoro p{
+opacity: 0.5;
+font-size: .8rem;
+font-weight: 100;
+}
+
+.control-pomodoro-buttons{
+  display: flex;
+  justify-content: end;
+  margin-top: .8rem;
+ 
+  
+  gap: .5rem;
+}
+
+.control-pomodoro-buttons button{
+  /* background-color: transparent; */
+  border: none;
+  color: var(--white-color);
+  padding: .5rem 1rem;
+   border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+.control-pomodoro-button-apply{
+  background-color:  rgb(53, 110, 94);
+}
+.control-pomodoro-button-reset{
+  background-color:  rgb(40, 44, 43);
+}

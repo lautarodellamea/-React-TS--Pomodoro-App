@@ -1,0 +1,145 @@
+:root {
+  --green-color: #2bae67;
+  --white-color: #ffffff;
+  --disable-white-color: #8f8f8f;
+  --black-color: #000000;
+  --black-tramsparent-color: rgba(0, 0, 0, 0.5);
+  --border-radius: 8px;
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  position: relative;
+  min-width: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+  overflow-x: hidden;
+  user-select: none;
+  background-color: #0e0e0e;
+  height: 100dvh;
+  color: var(--white-color);
+}
+
+
+
+/* Hero */
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  gap: 2.5rem;
+}
+
+/* rain & music buttons */
+
+.hero-buttons{
+  bottom: 4rem;
+  position: absolute;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn {
+  position: relative;
+  background-color: #39383d;
+  height: 2rem;
+  width: 3.2rem;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  padding: 0.1rem;
+  cursor: pointer;
+  box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, 0.233);
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-circle {
+  position: absolute;
+  background-color: var(--white-color);
+  height: 1.8rem;
+  width: 1.8rem;
+  border-radius: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-active {
+  background-color: var(--green-color);
+}
+
+.btn-active .btn-circle {
+  transform: translateX(1.22rem);
+}
+
+.svg {
+  opacity: 0.6;
+  height: 3rem;
+  width: 3rem;
+
+}
+.svg.svg-active {
+  opacity: 1;
+  filter: drop-shadow(0 0 0.5rem #ffffff);
+}
+
+/* logo */
+.title {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  display: flex;
+  align-items: center;
+}
+.title h1 {
+  font-weight: 500;
+  opacity: 1;
+  font-size: 2rem;
+  line-height: 2rem;
+  opacity: 0.5;
+  word-spacing: -0.2rem;
+}
+.title svg {
+  width: 80px;
+  filter: grayscale(1);
+  opacity: 0.5;
+}
+
+.title-span {
+  font-size: 2rem;
+  font-weight: 100;
+  text-transform: capitalize;
+  /* text-transform: uppercase; */
+}
+
+/* footer */
+.footer {
+  position: absolute;
+  bottom: 1rem;
+  font-size: 0.8rem;
+  display: flex;
+  gap: 0.4rem;
+  opacity: 0.6;
+  font-weight: 300;
+}
+
+.footer a {
+  color: var(--white-color);
+  text-decoration: none;
+  font-weight: 500;
+}
